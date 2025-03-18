@@ -385,6 +385,11 @@ transform: translate(-60%,-4.8%);
           </div>
         </div>
         <script>
+
+            const targetDate = "2023-12-21T23:59:59"; // Example date
+            window.onload = function () {
+                updateDifference(targetDate);
+            };
             function updateDifference(targetDate) {
                 const now = new Date();
                 const target = new Date(targetDate);
@@ -401,11 +406,7 @@ transform: translate(-60%,-4.8%);
                 dateDifferenceElement.innerText = differenceText;
                 
             }
-
-            // Set your target date here
-            const targetDate = "2023-12-21T23:59:59"; // Example date
-
-            setInterval(() => updateDifference(targetDate), 100000);
+            setInterval(() => updateDifference(targetDate), 10000);
         </script>
       </div>
 
